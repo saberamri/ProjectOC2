@@ -1,8 +1,3 @@
-#! /usr/bin/env python3
-# coding: utf-8
-
-"""trouver tous les liens des catégories dans une page"""
-
 from io import BytesIO
 from lxml import etree
 import requests
@@ -10,6 +5,8 @@ from urllib.parse import urljoin
 
 
 def href_load(url):
+    """trouver tous les liens des catégories dans une page"""
+    
     response = requests.get(url)
     if response.ok:
         tree = etree.parse(BytesIO(response.content), etree.HTMLParser())
