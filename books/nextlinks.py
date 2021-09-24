@@ -1,6 +1,3 @@
-#! /usr/bin/env python3
-# coding: utf-8
-
 from urllib.parse import urljoin
 from io import BytesIO
 from lxml import etree
