@@ -1,15 +1,10 @@
-#! /usr/bin/env python3
-# coding: utf-8
-
-"""Cette fonction scrappe les données d'un seul livre à partir d'une url"""
-
-
 from bs4 import BeautifulSoup
 import requests
 from urllib.parse import urljoin
 
 
 def export_data(url):
+    """Cette fonction scrappe les données d'un seul livre à partir d'une url"""
     response = requests.get(url)
     if response.ok:
         soup = BeautifulSoup(response.content, 'lxml')
