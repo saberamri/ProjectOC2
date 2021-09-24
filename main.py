@@ -12,7 +12,7 @@ def main():
     cat = href_load(url)
     result = []
 
-    for lim in cat[:1]:
+    for lim in cat[:]:
         obj = next_load(lim)
         for lm in obj:
             li = export_data(lm)
