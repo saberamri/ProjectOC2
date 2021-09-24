@@ -1,9 +1,3 @@
-#! /usr/bin/env python3
-# coding: utf-8
-
-"""
-trouver tous les url des livres de lien actuel à partir d'un lien de catégorie
-"""
 from urllib.parse import urljoin
 from io import BytesIO
 from lxml import etree
@@ -11,6 +5,8 @@ import requests
 
 
 def data_cat(url):
+    """trouver tous les url des livres de lien actuel à partir d'un lien de catégorie"""
+    
     response = requests.get(url) 
     if response.ok:
         tree = etree.parse(BytesIO(response.content), etree.HTMLParser())
