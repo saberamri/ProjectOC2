@@ -7,7 +7,7 @@ from books.nextlinks import next_load
 from books.catload import href_load
 
 def main():
-    """find all books urls from a category link"""
+    """trouver tous les url des livres à partir d'un lien de catégorie"""
 
     url = "http://books.toscrape.com/catalogue/category/books_1/index.html"
     cat = href_load(url)
@@ -24,7 +24,7 @@ def main():
     """export all category data in a single csv and all books images. 
     """
     clst = result[0].keys()
-    with open('export/All.csv', 'w', newline='') as data_output:
+    with open('export/All.csv', 'w', newline='', encoding='utf-8-sig') as data_output:
         csv_output = csv.DictWriter(data_output, fieldnames = clst, delimiter=';')
         csv_output.writeheader()
         for row in result:
