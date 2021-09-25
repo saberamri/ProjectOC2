@@ -4,7 +4,7 @@ from urllib.parse import urljoin
 
 
 def export_data(url):
-    """Cette fonction scrappe les données d'un seul livre à partir d'une url"""
+    """scrapping a single data  book's from a given url"""
     response = requests.get(url)
     if response.ok:
         soup = BeautifulSoup(response.content, 'lxml')
