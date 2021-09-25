@@ -7,7 +7,7 @@ from books.bookurl import data_cat
 
 
 def next_links(url):
-    """Cette fonction affiche le lien de la page next suivante"""
+    """This function displays books links of the same category on the page and the next page"""
 
     response = requests.get(url)
     if response.ok:
