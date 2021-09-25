@@ -5,7 +5,7 @@ import requests
 
 
 def data_cat(url):
-    """trouver tous les url des livres de lien actuel à partir d'un lien de catégorie"""
+    """find all current book  links urls from a category link"""
     
     response = requests.get(url) 
     if response.ok:
