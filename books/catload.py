@@ -5,7 +5,7 @@ from urllib.parse import urljoin
 
 
 def href_load(url):
-    """trouver tous les liens des catégories dans une page"""
+    """find all links category in one page"""
     
     response = requests.get(url)
     if response.ok:
