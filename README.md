@@ -56,4 +56,4 @@ $ .deactivate
 
 ```
 ## Statut du projet: 
-Le développement du projet est en cours.
+Le développement du projet est terminé.
